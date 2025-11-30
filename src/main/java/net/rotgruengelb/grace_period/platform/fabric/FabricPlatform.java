@@ -22,12 +22,12 @@ public class FabricPlatform implements Platform {
 
 	@Override
 	public GameRules.Key<GameRules.BooleanValue> registerBooleanGameRule(String key, GameRules.Category category, boolean defaultValue) {
-		return GameRuleRegistry.register(key, category, GameRules.BooleanValue.create(defaultValue));
+		return GameRuleRegistry.register(key, category, GameRuleFactory.createBooleanRule(defaultValue));
 	}
 
 	@Override
 	public GameRules.Key<GameRules.IntegerValue> registerIntegerGameRule(String key, GameRules.Category category, int defaultValue) {
-		return GameRuleRegistry.register(key, category, GameRules.IntegerValue.create(defaultValue));
+		return GameRuleRegistry.register(key, category, GameRuleFactory.createIntRule(defaultValue));
 	}
 }
 //?}
